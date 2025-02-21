@@ -1,12 +1,13 @@
 :root {
-    --margin-bottom : 10px;
+    --margin-bottom: 10px;
     --label-padding-right: 20px;
     --label-width: 200px;
     --widget-width: 250 px;
     --border-radius: 4px;
+    --border-color: 1px solid rgb(183, 189, 164);
     --main-padding: 30px;
     --input-text-size: 14px;
-    --color-main: #5d6063;
+    --color-main: #7f8286;
 }
 
 * {
@@ -19,7 +20,8 @@
 
 body {
     color: var(--color-main);
-    background-color: rgb(182, 219, 255);
+    /*background-color: rgb(182, 219, 255);*/
+    background-image: linear-gradient(to right, rgb(36, 6, 45), rgb(128, 43, 127));
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     /* flexbox is an alternative way to using floats for
@@ -32,10 +34,47 @@ body {
 
 .profile-header {
     text-align: center;
-    background-color: rgb(230, 230, 230);
-    border: 1px solid rgb(186, 189, 190);
+    background-color: rgb(213, 195, 195);
+    border: var(--border-color);
     border-radius: var(--border-radius);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
     margin: 25px 0;
     padding: var(--main-padding);
+}
+
+/* *********** Input Styling Section *********** */
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'] {
+    border-radius: var(--border-radius);
+    color: var(--color-main);
+    font-size: var(--input-text-size);
+    background-color: rgb(255, 255, 255);
+    border: var(--border-color);
+    padding: 7px;
+    width: var(--widget-width);
+}
+
+.form-row input[type='email']:invalid {
+    border: 1.5px solid rgb(212, 53, 56);
+    color: rgb(212, 53, 56);
+    box-shadow: none; /*removes default red glow in firefox*/
+}
+
+
+.form-row label {
+    margin-bottom: 20px;
+    padding-right: var(--label-padding-right);
+    text-align: right;
+    margin-top: 5px;
+}
+
+.profile-header, .profile-form {
+    width: 600px;
 }
