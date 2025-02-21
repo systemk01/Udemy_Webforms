@@ -1,0 +1,41 @@
+:root {
+    --margin-bottom : 10px;
+    --label-padding-right: 20px;
+    --label-width: 200px;
+    --widget-width: 250 px;
+    --border-radius: 4px;
+    --main-padding: 30px;
+    --input-text-size: 14px;
+    --color-main: #5d6063;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*the box sizing property allows us to include the
+    padding and the border in an elements total width and height*/
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-main);
+    background-color: rgb(182, 219, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    /* flexbox is an alternative way to using floats for
+    defining the overall appearance of a webpage*/
+    display: flex;
+    /*render all elements in our form vertically*/
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-header {
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(186, 189, 190);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    margin: 25px 0;
+    padding: var(--main-padding);
+}
